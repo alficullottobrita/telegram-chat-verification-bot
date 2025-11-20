@@ -1,1 +1,9 @@
+name = "telegram-bot-verification"
+compatibility_date = "2023-10-15"
 
+[vars]
+NODE_ENV = "production"
+
+[[kv_namespaces]]
+binding = "VERIFIED_USERS"
+id = "VERIFIED_USERS_ID"   # Replace with your KV namespace ID
