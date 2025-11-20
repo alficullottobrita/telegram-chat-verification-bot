@@ -1,1 +1,54 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Chat Verification</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Telegram Chat Verification</h1>
+            <p>Complete human verification to start chatting</p>
+        </header>
+        
+        <main>
+            <div class="card">
+                <h2>Step 1: Start Chat</h2>
+                <p>Go to Telegram and start a conversation with the bot:</p>
+                <div class="telegram-link">
+                    <a href="https://t.me/YourBotUsername" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
+                        <span>@YourBotUsername</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>Step 2: Human Verification</h2>
+                <p>Complete the verification below:</p>
+                <div class="verification-container">
+                    <div id="turnstile-widget"></div>
+                    <div id="verification-status">
+                        <p>Verification required before chatting</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>Step 3: Start Chatting</h2>
+                <p><span id="status-icon">⏳</span> <span id="chat-status">Waiting for verification...</span></p>
+                <button id="start-chat-btn" disabled>Start Chatting</button>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Secured with Cloudflare Turnstile • Deployed on Cloudflare Pages</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
